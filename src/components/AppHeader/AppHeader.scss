@@ -1,0 +1,41 @@
+
+.app-header {
+  background-color: $primary;
+  min-height: 10rem;
+  padding: 2rem;
+  color: white;
+  &__logo {
+    width: 5rem;
+  }
+
+  &__nav {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 20rem;
+    margin: 0 auto;
+    li a {
+      color: $white;
+      padding: 0.5rem 1rem;
+      border: 1px solid $white;
+      text-decoration: none;
+      border-radius: 3px;
+      margin-right: 1rem;
+      display: block;
+      transition: all 0.2s;
+    }
+    li a:hover {
+      background: $white;
+      color: $primary;
+    }
+  }
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
