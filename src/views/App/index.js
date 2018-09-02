@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './App.scss';
+import './styles.scss';
 import {
   BrowserRouter as Router,
   Route,
@@ -9,9 +9,10 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import Home from '../Home/Home';
-import About from '../About/About';
-import AppHeader from '../../components/AppHeader/AppHeader';
+import Home from '../Home';
+import About from '../About';
+import SampleTodo from '../SampleTodo';
+import AppHeader from '../../components/AppHeader';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
           <AppHeader></AppHeader>
           <Route path="/" exact={true} component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/todo" component={SampleTodo} />
         </div>
       </Router>
     );
