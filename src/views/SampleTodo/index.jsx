@@ -1,7 +1,6 @@
 import React from 'react';
-import TodoList from "./components/TodoList";
-import TodoListModel from "./models/todo-list";
-import TodoModel from "./models/todo";
+import TodoList from "./TodoList";
+import TodoListModel from "./TodoList/model";
 
 const SampleTodo = () => {
     const store = new TodoListModel();

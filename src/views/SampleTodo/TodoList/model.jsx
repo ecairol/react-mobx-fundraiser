@@ -1,6 +1,6 @@
 import { observable, computed, action } from "mobx";
 
-import TodoModel from "./todo";
+import TodoModel from "../Todo/model";
 
 export default class TodoListModel {
   @observable todos = [];
