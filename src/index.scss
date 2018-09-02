@@ -1,4 +1,7 @@
 @import './styles/variables';
 @import './styles/base';
 
-@import './components/AppHeader/styles';
+@import './views/App/styles';
+@import './views/App/components/AppHeader/styles';
+@import './views/SampleTodo/components/TodoList/styles';
+@import './views/SampleTodo/components/Todo/styles';

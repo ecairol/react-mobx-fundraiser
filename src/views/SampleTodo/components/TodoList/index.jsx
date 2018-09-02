@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { observable, action } from "mobx";
 import { observer } from "mobx-react";
 
-import Todo from "./todo";
+import Todo from "../Todo";
 
 @observer
 class TodoList extends React.Component {
@@ -10,7 +10,7 @@ class TodoList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="todo-list">
         <form onSubmit={this.handleFormSubmit}>
           New Todo:
           <input

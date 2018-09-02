@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './styles.scss';
+import './_styles.scss';
 import {
   BrowserRouter as Router,
   Route,
@@ -12,7 +12,7 @@ import {
 import Home from '../Home';
 import About from '../About';
 import SampleTodo from '../SampleTodo';
-import AppHeader from '../../components/AppHeader';
+import AppHeader from './components/AppHeader';
 
 class App extends Component {
   render() {
