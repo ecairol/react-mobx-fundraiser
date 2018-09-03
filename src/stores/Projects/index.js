@@ -10,6 +10,7 @@ export default class ProjectStore {
   @observable
   state = {
     list: [],
+    selected: null,
     error: false,
     busy: false,
   }
@@ -36,7 +37,8 @@ export default class ProjectStore {
     return this.state.list.length;
   }
 
-  fetch() {
+  // Functions that do not alter the state.
+  findAll() {
     this.setBusy(true);
     this.setError(false);
 

@@ -2,7 +2,7 @@ import { extendObservable, computed } from "mobx";
 
 export default class Project {
   constructor(data) {
-    const { id, title, description, goal, currency, address } = data;
+    const { id, title, description, goal, currency, address, total } = data;
 
     extendObservable(this, {
       id,
@@ -11,6 +11,7 @@ export default class Project {
       goal,
       currency,
       address,
+      total
     })
   }
 

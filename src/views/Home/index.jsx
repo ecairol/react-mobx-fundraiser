@@ -12,7 +12,7 @@ class Home extends Component {
         const project = this.props.project;
         if (project.projectsLength > 0) return;
 
-        project.fetch();
+        project.findAll();
     }
 
     render() {

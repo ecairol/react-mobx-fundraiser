@@ -7,18 +7,33 @@ import { observer } from "mobx-react";
 class ProjectForm extends Component {
   newProject = observable({
     title: "",
-    goal: ""
+    description: "",
+    goal: 0,
+    currency: "BTC",
+    address: "",
+    total: 0
   });
 
   render() {
     return (
       <form onSubmit={this.handleFormSubmit} className="project-form">
         <div>
-          <label>Project Name</label>
+          <label>Project Title</label>
           <input
             type="text"
             name="title"
+            placeholder = "The title or name of your project"
             value={this.newProject.title}
+            onChange={this.handleInputChange}
+          />
+        </div>
+        <div>
+          <label>Project Description</label>
+          <input
+            type="text"
+            name="description"
+            placeholder = "Brief description of what's your project about"
+            value={this.newProject.description}
             onChange={this.handleInputChange}
           />
         </div>
@@ -27,7 +42,28 @@ class ProjectForm extends Component {
           <input
             type="text"
             name="goal"
+            placeholder = "(e.g) 1.5 BTC"
             value={this.newProject.goal}
+            onChange={this.handleInputChange}
+          />
+        </div>
+        <div>
+          <label>Currency</label>
+          <input
+            type="text"
+            name="currency"
+            placeholder="(e.g.) BTC"
+            value={this.newProject.currency}
+            onChange={this.handleInputChange}
+          />
+        </div>
+        <div>
+          <label>{this.newProject.currency} Address</label>
+          <input
+            type="text"
+            name="address"
+            placeholder="(e.g.) BoatSLRHtKNngkdXEeobR76b53LETtpyT"
+            value={this.newProject.address}
             onChange={this.handleInputChange}
           />
         </div>
@@ -44,11 +80,12 @@ class ProjectForm extends Component {
 
   @action
   handleFormSubmit = e => {
-    this.props.store.addProject(this.newProject);
-    //this.newProject = {};
-    console.log('redirect back to PROJECT LIST');
-    debugger;
     e.preventDefault();
+    this.props.store.add(this.newProject);
+    this.newProject = {
+      currency: "BTC"
+    };
+    //this.props.history.push('/');
   };
 }
 
