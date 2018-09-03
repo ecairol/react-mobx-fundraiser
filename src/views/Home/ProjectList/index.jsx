@@ -11,10 +11,9 @@ class ProjectList extends React.Component {
   render() {
     return (
       <div className="project-list">
-        {this.props.store.projects.map(project => (
+        {this.props.store.state.list.map(project => (
           <ProjectCard project={project} key={project.id} />
         ))}
-        Total Projects: {this.props.store.projects.length}
       </div>
     );
   }

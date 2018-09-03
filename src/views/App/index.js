@@ -1,30 +1,34 @@
 import React, { Component } from 'react';
-
-import './_styles.scss';
+import { observer, Provider } from 'mobx-react';
 import {
   BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  Redirect
+  Route
 } from 'react-router-dom';
 
+import './_styles.scss';
 import Home from '../Home';
 import About from '../About';
-import SampleTodo from '../SampleTodo';
+import NewProject from '../NewProject';
 import AppHeader from './components/AppHeader';
 
+import ProjectStore from '../../stores/Projects';
+
+const projectStore = new ProjectStore();
+
+@observer
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="app">
-          <AppHeader></AppHeader>
-          <Route path="/" exact={true} component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/todo" component={SampleTodo} />
-        </div>
-      </Router>
+      <Provider project={projectStore}>
+        <Router>
+          <div className="app">
+            <AppHeader></AppHeader>
+            <Route path="/" exact={true} component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/projects/new" component={NewProject} />
+          </div>
+        </Router>
+      </Provider>
     );
   }
 }

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 12,
+    "title": "New album release + concert",
+    "description": "I'm making a brand new record, and I need your help to finish the production and to release it properly into the world!",
+    "goal": 3.5,
+    "currency": "BTC",
+    "address": "3H4X31j1pHswncoeasRjJt7TKBJLZz6ABE"
+  },
+  {
+    "id": 13,
+    "title": "Monument to F. Von Hayek",
+    "description": "Help us create a monument to this austrian economist lorem ipsum dolor sit amet",
+    "goal": 6,
+    "currency": "BTC",
+    "address": "4F2X31j1pHswnjoe7sRjJt7TKBvJRc5CB3"
+  },
+  {
+    "id": 14,
+    "title": "SparkMaker FHD - The Most Affordable FHD SLA 3D Printer",
+    "description": "Fast printing speed, High resolution, and reliable 1080p SLA printer for everyone.",
+    "goal": 8.5,
+    "currency": "BTC",
+    "address": "6F4de6F1pHswnvoxasRjJt7TKBJLYi2d0G"
+  }
+]
