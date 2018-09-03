@@ -5,6 +5,11 @@
   padding: 2rem;
   color: white;
   text-align: center;
+
+  .app-title {
+    font-size: 1.5em;
+    margin-bottom: 2.2rem;
+  }
   
   &__logo {
     width: 5rem;
@@ -15,7 +20,7 @@
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    max-width: 20rem;
+    max-width: 30rem;
     margin: 0 auto;
     li a {
       color: $white;
@@ -32,12 +37,12 @@
       color: $primary;
     }
   }
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+  @media (max-width: $screen-s) {
+    &__nav {
+      display: block;
+      li {
+        margin-bottom: 0.3rem;
+      }
+    }
+  }
 }

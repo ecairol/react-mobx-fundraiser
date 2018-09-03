@@ -25,7 +25,7 @@ class App extends Component {
             <AppHeader></AppHeader>
             <Route path="/" exact={true} component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/projects/new" component={NewProject} />
+            <Route path="/submit" component={NewProject} />
           </div>
         </Router>
       </Provider>

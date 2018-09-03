@@ -1,10 +1,13 @@
 .project-list {
-  padding: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
 
   .project-card {
     flex: 0 0 50%;
     margin-bottom: 1rem;
+  }
+  @media (max-width: $screen-s) {
+    display: block;
   }
 }
