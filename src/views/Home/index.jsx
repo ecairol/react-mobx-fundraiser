@@ -17,9 +17,10 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="page page-about">
-                <h1>Welcome to CryptoFund</h1>
-                Total Projects: {this.props.project.projectsLength}
+            <div className="page page-home">
+                <div className="home-header">
+                    <h1>Recent Projects ({this.props.project.projectsLength})</h1>
+                </div>
                 <ProjectList store={this.props.project}></ProjectList>
             </div>
         );
