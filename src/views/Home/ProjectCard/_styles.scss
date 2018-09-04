@@ -16,4 +16,26 @@
     cursor: pointer;
     display: block;
   }
+
+  .address-qr {
+    float: right;
+    text-align: center;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+
+    h3 {
+      margin: 0 0 0.3rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+    } 
+  }
+
+  @media (max-width: $screen-xs) {
+    .address-qr {
+      float: none;
+      margin: 0 auto 2rem;
+      
+    }
+  }
 }
