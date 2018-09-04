@@ -8,7 +8,7 @@ class ProjectForm extends Component {
   newProject = observable({
     title: "",
     description: "",
-    goal: 0,
+    goal: "",
     currency: "BTC",
     address: "",
     total: 0
@@ -17,7 +17,7 @@ class ProjectForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleFormSubmit} className="project-form">
-        <div>
+        <div className="form-row">
           <label>Project Title</label>
           <input
             type="text"
@@ -27,7 +27,7 @@ class ProjectForm extends Component {
             onChange={this.handleInputChange}
           />
         </div>
-        <div>
+        <div className="form-row">
           <label>Project Description</label>
           <input
             type="text"
@@ -37,7 +37,7 @@ class ProjectForm extends Component {
             onChange={this.handleInputChange}
           />
         </div>
-        <div>
+        <div className="form-row">
           <label>Project Goal</label>
           <input
             type="text"
@@ -47,18 +47,19 @@ class ProjectForm extends Component {
             onChange={this.handleInputChange}
           />
         </div>
-        <div>
+        <div className="form-row">
           <label>Currency</label>
           <input
             type="text"
             name="currency"
+            maxlength="4"
             placeholder="(e.g.) BTC"
             value={this.newProject.currency}
             onChange={this.handleInputChange}
           />
         </div>
-        <div>
-          <label>{this.newProject.currency} Address</label>
+        <div className="form-row">
+          <label><span className="currency">{this.newProject.currency}</span> Address</label>
           <input
             type="text"
             name="address"
@@ -67,7 +68,10 @@ class ProjectForm extends Component {
             onChange={this.handleInputChange}
           />
         </div>
-        <button type="submit">Add</button>
+        
+        <div className="form-row ctas">
+          <button className="btn btn-primary" type="submit">Submit Project</button>
+        </div>
         
       </form>
     );

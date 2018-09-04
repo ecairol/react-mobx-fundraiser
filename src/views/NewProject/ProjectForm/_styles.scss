@@ -1,4 +1,33 @@
 .project-form {
-  border: 1px solid $secondary;
+  border: 1px solid $tertiary;
   padding: 1rem;
+
+  .form-row {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+
+    label {
+      width: 20%;
+      text-align: right;
+      margin-right: 0.5rem;
+      &:after {
+        content: ":";
+      }
+    }
+    input {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+    .currency,
+    input[name="currency"] {
+      text-transform: uppercase;
+    }
+
+  }
+  .ctas {
+    justify-content: flex-end;
+  }
 }
