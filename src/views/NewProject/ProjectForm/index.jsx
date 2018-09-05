@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import { observable, action } from "mobx";
 import { observer } from "mobx-react";
+import PropTypes from 'prop-types';
+import ProjectsStore from '../../../stores/Projects';
 
 
 @observer
 class ProjectForm extends Component {
+  static propTypes = {
+    project: PropTypes.instanceOf(ProjectsStore)
+  }
+
   newProject = observable({
     title: "",
     description: "",
@@ -52,7 +58,7 @@ class ProjectForm extends Component {
           <input
             type="text"
             name="currency"
-            maxlength="4"
+            maxLength="4"
             placeholder="(e.g.) BTC"
             value={this.newProject.currency}
             onChange={this.handleInputChange}
