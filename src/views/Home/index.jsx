@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProjectList from "./ProjectList";
 //import ProjectListModel from "./ProjectList/model";
-import { observer, inject, PropTypes } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 
 @inject('project')
 

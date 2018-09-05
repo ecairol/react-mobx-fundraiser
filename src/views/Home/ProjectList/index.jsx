@@ -5,7 +5,7 @@ import { observer } from "mobx-react";
 import ProjectCard from "../ProjectCard";
 
 @observer
-class ProjectList extends React.Component {
+class ProjectList extends Component {
   @observable newTodoTitle = "";
 
   render() {
